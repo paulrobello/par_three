@@ -1,0 +1,30 @@
+{
+  "name": "par_three",
+  "version": "1.0.0",
+  "description": "threejs test",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build_list": "node build_list.js",
+    "build": "vite build",
+    "serve": "vite preview",
+    "lint": "eslint --ext.js,.vue src",
+    "format": "prettier --write '**/*.{js,vue,json,css}'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tweenjs/tween.js": "^25.0.0",
+    "dat.gui": "^0.7.9",
+    "three": "^0.173.0",
+    "typescript": "^5.7.3"
+  },
+  "devDependencies": {
+    "@types/dat.gui": "^0.7.13",
+    "@types/node": "^22.13.5",
+    "@types/three": "^0.173.0",
+    "prettier": "^3.5.1",
+    "vite": "^6.1.1"
+  }
+}
