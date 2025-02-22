@@ -56,6 +56,8 @@ for (let i = 0; i < images.length; i++) {
 
   const texture = textureLoader.load("./art/" + images[i]);
   texture.colorSpace = THREE.SRGBColorSpace;
+  texture.generateMipmaps = false;
+
   const border = new THREE.Mesh(
     new THREE.BoxGeometry(itemWidth + 0.2, 2.2, 0.09),
     new THREE.MeshStandardMaterial({ color: 0x202020 }),
@@ -65,7 +67,7 @@ for (let i = 0; i < images.length; i++) {
   baseNode.add(border);
   const artwork = new THREE.Mesh(
     new THREE.BoxGeometry(itemWidth, 2, 0.1),
-    new THREE.MeshStandardMaterial({ map: texture }),
+    new THREE.MeshStandardMaterial({ map: texture, roughness: 0 }),
   );
   artwork.name = `Art_${i}`;
   border.add(artwork);
@@ -98,6 +100,7 @@ for (let i = 0; i < images.length; i++) {
 }
 
 const spotLight = new THREE.SpotLight(0xffffff, 110.0, radius - 1, 0.4, 0.35);
+spotLight.castShadow = false;
 spotLight.position.set(0, 4, 0);
 spotLight.target.position.set(0, 2.4, -1.5);
 scene.add(spotLight);
