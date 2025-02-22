@@ -3,5 +3,5 @@
  */
 
 export default {
-    base: process.env.NODE_ENV === 'production' ? '/par_three/' : '',
+    // base: process.env.NODE_ENV === 'production' ? '/par_three/' : '',
 }
